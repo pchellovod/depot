@@ -5,7 +5,6 @@ Rails.application.routes.draw do
     post 'login' => :create
     delete 'logout' => :destroy
   end
-  
 
   get 'sessions/new'
 
@@ -22,9 +21,7 @@ Rails.application.routes.draw do
   resources :products do
     get :who_bought, on: :member
   end
-  
-  
-  
+
   root to: 'store#index', as: 'store'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
